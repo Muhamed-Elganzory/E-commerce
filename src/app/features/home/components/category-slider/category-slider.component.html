@@ -1,0 +1,12 @@
+<h1 class="text-4xl ml-2 my-5 border-l-3 border-l-main-color pl-2"> Shop Popular Categories</h1>
+<section>
+  <owl-carousel-o [options]="customOptions">
+    <ng-container>
+      @for (category of categories; track category._id){
+        <ng-template carouselSlide id="category._id">
+          <img [src]="category.image" class="w-full h-50 object-contain object-top" [alt]="category.name" [title]="category.name">
+        </ng-template>
+      }
+    </ng-container>
+  </owl-carousel-o>
+</section>

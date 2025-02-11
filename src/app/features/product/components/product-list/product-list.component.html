@@ -1,0 +1,12 @@
+<div class="pt-16">
+  <section class="max-w-screen-xl p-4 mx-auto">
+    <div class="mx-auto">
+      <h1 class="text-4xl my-5 border-l-3 border-l-main-color pl-2">Popular Products</h1>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 my-5">
+        @for(product of allProducts; track product._id){
+          <app-product-card [product]="product"></app-product-card>
+        }
+      </div>
+    </div>
+  </section>
+</div>

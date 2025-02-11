@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+@import "tailwindcss";
+@source "../node_modules/flowbite";
+
+@theme{
+  --color-main-color: #0aad0a;
+  --color-light-color: #f0f3f2;
+  --color-rating-color: #ffc908;
+  --shadow-main-shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+  --font-main-font-family: "Encode Sans Expanded", sans-serif;
+}
+
+body{
+  font-family: var(--font-main-font-family), serif;
+}
+
+@layer components {
+  .btn-add-cart{
+    @apply bg-main-color text-white px-5 py-1.5 rounded-2xl w-full mb-2.5 hover:bg-main-color/80 cursor-pointer transition-all duration-700 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100;
+  }
+}
