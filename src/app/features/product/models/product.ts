@@ -10,7 +10,7 @@ export interface IProduct {
   quantity: number
   price: number
   imageCover: string
-  category: ICategory
+  category: Category
   brand: Brand
   ratingsAverage: number
   createdAt: string
@@ -25,7 +25,7 @@ export interface Subcategory {
   category: string
 }
 
-export interface ICategory {
+export interface Category {
   _id: string
   name: string
   slug: string

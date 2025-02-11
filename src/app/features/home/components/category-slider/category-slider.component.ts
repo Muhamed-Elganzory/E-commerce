@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {ProductsService} from '../../../product/services/products.service';
-import {ICategory, IProduct} from '../../../product/models/product';
+import {Category, IProduct} from '../../../product/models/product';
 import {CarouselModule, OwlOptions} from 'ngx-owl-carousel-o';
 
 @Component({
@@ -12,7 +12,7 @@ import {CarouselModule, OwlOptions} from 'ngx-owl-carousel-o';
   styleUrl: './category-slider.component.css'
 })
 export class CategorySliderComponent implements OnInit {
-  categories: ICategory [] = [];
+  categories: Category [] = [];
 
   private readonly productsService: ProductsService = inject(ProductsService);
   customOptions: OwlOptions = {

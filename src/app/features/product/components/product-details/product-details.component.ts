@@ -17,7 +17,13 @@ export class ProductDetailsComponent implements OnInit {
   private readonly productsService: ProductsService = inject(ProductsService);
 
   getProductID(){
-    this.productID = this.activatedRoute.snapshot.params['id'];
+    this.activatedRoute.paramMap.subscribe({
+      next: (params: any) => {
+        this.productID = params.get("id");
+        console.log(params.get('id'));
+      }
+    })
+    // this.productID = this.activatedRoute.snapshot.params['id'];
   }
 
   getProductDetails(productID: string | null): void {
