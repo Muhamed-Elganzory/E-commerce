@@ -14,5 +14,8 @@ import {CategorySliderComponent} from '../category-slider/category-slider.compon
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  title: string = '';
+  constructor() {
+    this.title = 'Home';
+  }
 }
