@@ -12,7 +12,12 @@ import {BrandListComponent} from './features/brands/components/brand-list/brand-
 import {ProductDetailsComponent} from './features/product/components/product-details/product-details.component';
 
 export const routes: Routes = [
-
+  {path: '', component: AuthLayoutComponent, children: [
+      {path: '', redirectTo: 'login', pathMatch: 'full'},
+      {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent},
+    ]
+  },
   {path: '', component: UserLayoutComponent, children: [
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: 'home', component: HomeComponent},
@@ -21,12 +26,6 @@ export const routes: Routes = [
       {path: 'product-details/:id', component: ProductDetailsComponent},
       {path: 'brands', component: BrandListComponent},
       {path: 'cart', component: CartComponent},
-    ]
-  },
-  {path: '', component: AuthLayoutComponent, children: [
-      {path: '', redirectTo: 'login', pathMatch: 'full'},
-      {path: 'login', component: LoginComponent},
-      {path: 'register', component: RegisterComponent},
     ]
   },
   {path: '**', component: NotFoundComponent},
